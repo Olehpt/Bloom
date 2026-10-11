@@ -19,7 +19,6 @@ double Bloom::read_from_file(const std::string& filename) {
 	}
 	auto end = std::chrono::high_resolution_clock::now();
 	double result = std::chrono::duration<double>(end - start).count();
-	std::cout << "Multiple hashing. Time taken to read from file: " << result << " seconds" << std::endl;
 	file.close();
 	return result;
 }

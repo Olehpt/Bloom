@@ -53,3 +53,12 @@ bool Bloom::find_p(const std::string& s) {
 void Bloom::reset() {
 	bits = std::vector<bool>(actual_size, 0);
 }
+
+float Bloom::ratio() {
+	unsigned long size = 0;
+	for (bool b : bits) {
+		if (b) size++;
+	}
+	std::cout << "Set bits: " << size << "\n";
+	return (float)size * 100 / actual_size;
+}

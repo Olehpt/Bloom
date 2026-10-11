@@ -26,4 +26,6 @@ public:
 
 	bool check_false_triggers(const std::string& filename_init, const std::string& filename_ops);
 	bool check_false_triggers_p(const std::string& filename_init, const std::string& filename_ops);
+
+	float ratio();
 };
